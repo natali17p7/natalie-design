@@ -1,0 +1,30 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "whatWeDo": "What We Do",
+      "contacts": "Contacts"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Natalie Pundyk Design",
+      "cta": "Send request"
+    },
+    "projects": {
+      "filters": {
+        "all": "All",
+        "commercial": "Commercial",
+        "residential": "Residential"
+      }
+    }
+  },
+  "contactModal": {
+    "title": "Get in touch",
+    "email": "Email",
+    "phone": "Phone",
+    "close": "Close"
+  },
+  "footer": "Footer"
+}
