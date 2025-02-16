@@ -1,0 +1,4 @@
+-frontend/.next
+-frontend/node_modules/next/dist/esm
+-frontend/node_modules/next/dist/compiled
++~/.virtualenvs/blah-blag/lib/
