@@ -1,11 +1,12 @@
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslation } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function Header({ lng }: { lng: string }) {
-  const { t } = useTranslation(lng, 'header');
+export default function Header({ locale }: { locale: string }) {
+  const t = useTranslations("Header");
   const pathname = usePathname();
 
   const navLinks = [
@@ -27,14 +28,14 @@ export default function Header({ lng }: { lng: string }) {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
             {navLinks.map((link) => (
               <li key={link.key}>
-                <Link href={`/${lng}${link.href}`} className={pathname === `/${lng}${link.href}` ? 'underline' : ''}>
-                  {t(`nav.${link.key}`)}
+                <Link href={`/${locale}${link.href}`} className={pathname === `/${locale}${link.href}` ? 'underline' : ''}>
+                  {t(`nav-${link.key}`)}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <Link href={`/${lng}`} className="btn btn-ghost h-auto p-2">
+        <Link href={`/${locale}`} className="btn btn-ghost h-auto p-2">
           <Image src="/images/logo.svg" alt="Logo" width={40} height={40} />
         </Link>
       </div>
@@ -44,10 +45,10 @@ export default function Header({ lng }: { lng: string }) {
           {navLinks.map((link) => (
             <li key={link.key}>
               <Link
-                href={`/${lng}${link.href}`}
-                className={`text-lg ${pathname === `/${lng}${link.href}` ? 'underline' : ''}`}
+                href={`/${locale}${link.href}`}
+                className={`text-lg ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`}
               >
-                {t(`nav.${link.key}`)}
+                {t(`nav-${link.key}`)}
               </Link>
             </li>
           ))}
@@ -60,7 +61,7 @@ export default function Header({ lng }: { lng: string }) {
             <Link
               key={lang}
               href={`/${lang}${pathname?.split('/').slice(2).join('/') || '/'}`}
-              className={lng === lang ? 'overline' : ''}
+              className={locale === lang ? 'overline' : ''}
             >
               {lang.toUpperCase()}
             </Link>

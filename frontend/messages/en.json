@@ -42,5 +42,24 @@
   "PathnamesPage": {
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
     "title": "Pathnames"
+  },
+  "Header": {
+    "nav-home": "Home",
+    "nav-projects": "Projects",
+    "nav-whatWeDo": "What We Do",
+    "nav-contacts": "Contacts"
+  },
+  "mainPage": {
+    "title": "Natalie Pundyk Design",
+    "cta": "Send request"
+  },
+  "contactModal": {
+    "title": "Get in touch",
+    "email": "Email",
+    "phone": "Phone",
+    "close": "Close"
+  },
+  "Footer": {
+    "text": "© 2024 Natalie Pundyk Design. All rights reserved."
   }
 }
