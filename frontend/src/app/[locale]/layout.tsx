@@ -4,6 +4,7 @@ import {ReactNode} from 'react';
 import BaseLayout from '@/components/BaseLayout';
 import {routing} from '@/i18n/routing';
 
+
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;

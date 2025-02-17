@@ -1,3 +1,4 @@
+import '@/styles/globals.css';
 import {clsx} from 'clsx';
 import {Inter} from 'next/font/google';
 import {NextIntlClientProvider} from 'next-intl';
