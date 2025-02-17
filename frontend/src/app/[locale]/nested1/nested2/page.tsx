@@ -2,10 +2,16 @@ import styles from "../../page.module.css";
 import { getIntl } from "@/lib/intl";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default async function Nested({ params: { locale } }: Props) {
+export default async function Nested(props: Props) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const intl = await getIntl(locale);
 
   return (
