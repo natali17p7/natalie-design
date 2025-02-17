@@ -40,3 +40,8 @@ Stop other containers in case port conflicts
 ``` sh
 $> docker stop $(docker ps -a -q)
 ```
+
+npm i -g corepack@latest
+pnpm add -g npm-check-updates
+ncu
+ncu -u

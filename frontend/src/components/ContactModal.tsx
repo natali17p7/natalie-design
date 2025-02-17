@@ -1,14 +1,14 @@
 'use client';
-import { useTranslation } from '@/i18n/client';
+import { useTranslation } from 'next-intl';
 
 const encodedEmail = Buffer.from('natali.17p7@gmail.com').toString('base64');
 const encodedPhone = Buffer.from('+380967638994').toString('base64');
 
 export default function ContactModal() {
   const { t } = useTranslation('en', 'contactModal'); // Assuming language is handled by parent
-  
+
   const decode = (str: string) => Buffer.from(str, 'base64').toString();
-  
+
   return (
     <dialog id="contact_modal" className="modal">
       <div className="modal-box">
@@ -21,7 +21,7 @@ export default function ContactModal() {
             <strong>{t('phone')}:</strong> {decode(encodedPhone)}
           </p>
           <div className="flex gap-4 pt-4">
-            <a 
+            <a
               href={`https://wa.me/${decode(encodedPhone)}`}
               className="btn btn-outline btn-sm"
               target="_blank"

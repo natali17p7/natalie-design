@@ -1,13 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslation } from '@/i18n/client';
+import { useTranslation } from 'next-intl';
 import Image from 'next/image';
 
 export default function Header({ lng }: { lng: string }) {
   const { t } = useTranslation(lng, 'header');
   const pathname = usePathname();
-  
+
   const navLinks = [
     { href: '/', key: 'home' },
     { href: '/projects', key: 'projects' },
@@ -38,13 +38,13 @@ export default function Header({ lng }: { lng: string }) {
           <Image src="/images/logo.svg" alt="Logo" width={40} height={40} />
         </Link>
       </div>
-      
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">
           {navLinks.map((link) => (
             <li key={link.key}>
-              <Link 
-                href={`/${lng}${link.href}`} 
+              <Link
+                href={`/${lng}${link.href}`}
                 className={`text-lg ${pathname === `/${lng}${link.href}` ? 'underline' : ''}`}
               >
                 {t(`nav.${link.key}`)}
@@ -57,7 +57,7 @@ export default function Header({ lng }: { lng: string }) {
       <div className="navbar-end gap-4">
         <div className="hidden lg:flex gap-2">
           {['en', 'pl', 'uk'].map((lang) => (
-            <Link 
+            <Link
               key={lang}
               href={`/${lang}${pathname?.split('/').slice(2).join('/') || '/'}`}
               className={lng === lang ? 'overline' : ''}
