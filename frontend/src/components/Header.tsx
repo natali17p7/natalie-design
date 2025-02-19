@@ -1,20 +1,20 @@
 
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function Header({ locale }: { locale: string }) {
-  const t = useTranslations("Header");
-  const pathname = usePathname();
+  const t = useTranslations("Header")
+  const pathname = usePathname()
 
   const navLinks = [
     { href: '/', key: 'home' },
     { href: '/projects', key: 'projects' },
     { href: '/what-we-do', key: 'whatWeDo' },
     { href: '/contacts', key: 'contacts' },
-  ];
+  ]
 
   return (
     <div className="navbar bg-base-100 px-4 sm:px-8">
@@ -69,5 +69,5 @@ export default function Header({ locale }: { locale: string }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

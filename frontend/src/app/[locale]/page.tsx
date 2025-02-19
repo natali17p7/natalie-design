@@ -1,19 +1,19 @@
-import {useTranslations} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
-import { use } from "react";
-import PageLayout from '@/components/PageLayout';
+import {useTranslations} from 'next-intl'
+import {setRequestLocale} from 'next-intl/server'
+import { use } from "react"
+import PageLayout from '@/components/PageLayout'
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
 export default function IndexPage(props: Props) {
-  const params = use(props.params);
+  const params = use(props.params)
   // Enable static rendering
-  const locale = params.locale;
-  setRequestLocale(locale);
+  const locale = params.locale
+  setRequestLocale(locale)
 
-  const t = useTranslations('IndexPage');
+  const t = useTranslations('IndexPage')
 
   return (
     <PageLayout title={t('title')}>
@@ -25,5 +25,5 @@ export default function IndexPage(props: Props) {
         })}
       </p>
     </PageLayout>
-  );
+  )
 }

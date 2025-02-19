@@ -1,23 +1,23 @@
-import {useTranslations} from 'next-intl';
-import {setRequestLocale} from 'next-intl/server';
-import { use } from "react";
-import PageLayout from '@/components/PageLayout';
+import {useTranslations} from 'next-intl'
+import {setRequestLocale} from 'next-intl/server'
+import { use } from "react"
+import PageLayout from '@/components/PageLayout'
 
 type Props = {
   params: Promise<{locale: string}>;
 };
 
 export default function PathnamesPage(props: Props) {
-  const params = use(props.params);
+  const params = use(props.params)
 
   const {
     locale
-  } = params;
+  } = params
 
   // Enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale)
 
-  const t = useTranslations('PathnamesPage');
+  const t = useTranslations('PathnamesPage')
 
   return (
     <PageLayout title={t('title')}>
@@ -30,5 +30,5 @@ export default function PathnamesPage(props: Props) {
         })}
       </div>
     </PageLayout>
-  );
+  )
 }

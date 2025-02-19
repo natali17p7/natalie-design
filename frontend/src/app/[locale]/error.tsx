@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import {useTranslations} from 'next-intl';
-import {useEffect} from 'react';
-import PageLayout from '@/components/PageLayout';
+import {useTranslations} from 'next-intl'
+import {useEffect} from 'react'
+import PageLayout from '@/components/PageLayout'
 
 type Props = {
   error: Error;
@@ -10,11 +10,11 @@ type Props = {
 };
 
 export default function Error({error, reset}: Props) {
-  const t = useTranslations('Error');
+  const t = useTranslations('Error')
 
   useEffect(() => {
-    console.error(error);
-  }, [error]);
+    console.error(error)
+  }, [error])
 
   return (
     <PageLayout title={t('title')}>
@@ -33,5 +33,5 @@ export default function Error({error, reset}: Props) {
         })}
       </div>
     </PageLayout>
-  );
+  )
 }

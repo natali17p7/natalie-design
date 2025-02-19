@@ -1,13 +1,13 @@
-'use client';
-import { useTranslation } from 'next-intl';
+'use client'
+import { useTranslation } from 'next-intl'
 
-const encodedEmail = Buffer.from('natali.17p7@gmail.com').toString('base64');
-const encodedPhone = Buffer.from('+380967638994').toString('base64');
+const encodedEmail = Buffer.from('natali.17p7@gmail.com').toString('base64')
+const encodedPhone = Buffer.from('+380967638994').toString('base64')
 
 export default function ContactModal() {
-  const { t } = useTranslation('en', 'contactModal'); // Assuming language is handled by parent
+  const { t } = useTranslation('en', 'contactModal') // Assuming language is handled by parent
 
-  const decode = (str: string) => Buffer.from(str, 'base64').toString();
+  const decode = (str: string) => Buffer.from(str, 'base64').toString()
 
   return (
     <dialog className="modal" id="contact_modal">
@@ -44,5 +44,5 @@ export default function ContactModal() {
         </div>
       </div>
     </dialog>
-  );
+  )
 }

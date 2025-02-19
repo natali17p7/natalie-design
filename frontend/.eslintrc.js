@@ -39,5 +39,5 @@ module.exports = {
     //   }
     // }],
   },
-  ignorePatterns: [".next", "config/*", ".eslintrc.js", "vitest.config.js"],
+  ignorePatterns: [".next", "config/*", ".eslintrc.js", "vitest.config.js", "jest.config.js", "next.config.js"],
 };

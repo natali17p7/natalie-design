@@ -1,18 +1,18 @@
-import { getIntl } from "@/lib/intl";
-import styles from "../../page.module.css";
+import { getIntl } from "@/lib/intl"
+import styles from "../../page.module.css"
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
 export default async function Nested(props: Props) {
-  const params = await props.params;
+  const params = await props.params
 
   const {
     locale
-  } = params;
+  } = params
 
-  const intl = await getIntl(locale);
+  const intl = await getIntl(locale)
 
   return (
     <div className={styles.container}>
@@ -22,5 +22,5 @@ export default async function Nested(props: Props) {
         </h1>
       </main>
     </div>
-  );
+  )
 }

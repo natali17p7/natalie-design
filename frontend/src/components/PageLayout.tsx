@@ -1,6 +1,6 @@
-import {useTranslations} from 'next-intl';
-import {ReactNode} from 'react';
-import ExternalLink from './ExternalLink';
+import {useTranslations} from 'next-intl'
+import {ReactNode} from 'react'
+import ExternalLink from './ExternalLink'
 
 type Props = {
   children?: ReactNode;
@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function PageLayout({children, title}: Props) {
-  const t = useTranslations('PageLayout');
+  const t = useTranslations('PageLayout')
 
   return (
     <div className="bg-slate-850 relative flex grow flex-col py-36">
@@ -34,5 +34,5 @@ export default function PageLayout({children, title}: Props) {
         </div>
       </div>
     </div>
-  );
+  )
 }
