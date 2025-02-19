@@ -1,5 +1,5 @@
-import styles from "../../page.module.css";
 import { getIntl } from "@/lib/intl";
+import styles from "../../page.module.css";
 
 type Props = {
   params: Promise<{ locale: string }>;

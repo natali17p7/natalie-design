@@ -10,9 +10,9 @@ export default function ContactModal() {
   const decode = (str: string) => Buffer.from(str, 'base64').toString();
 
   return (
-    <dialog id="contact_modal" className="modal">
+    <dialog className="modal" id="contact_modal">
       <div className="modal-box">
-        <h3 className="font-bold text-lg mb-4">{t('title')}</h3>
+        <h3 className="mb-4 text-lg font-bold">{t('title')}</h3>
         <div className="space-y-2">
           <p>
             <strong>{t('email')}:</strong> {decode(encodedEmail)}
@@ -22,16 +22,16 @@ export default function ContactModal() {
           </p>
           <div className="flex gap-4 pt-4">
             <a
-              href={`https://wa.me/${decode(encodedPhone)}`}
               className="btn btn-outline btn-sm"
-              target="_blank"
+              href={`https://wa.me/${decode(encodedPhone)}`}
+              rel="noreferrer" target="_blank"
             >
               WhatsApp
             </a>
             <a
-              href={`https://t.me/${decode(encodedPhone)}`}
               className="btn btn-outline btn-sm"
-              target="_blank"
+              href={`https://t.me/${decode(encodedPhone)}`}
+              rel="noreferrer" target="_blank"
             >
               Telegram
             </a>

@@ -1,9 +1,9 @@
 
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 
 export default function Header({ locale }: { locale: string }) {
   const t = useTranslations("Header");
@@ -20,33 +20,33 @@ export default function Header({ locale }: { locale: string }) {
     <div className="navbar bg-base-100 px-4 sm:px-8">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+          <label className="btn btn-ghost lg:hidden" tabIndex={0}>
+            <svg className="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6h16M4 12h8m-8 6h16" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
             </svg>
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
+          <ul className="menu dropdown-content rounded-box menu-sm z-10 mt-3 w-52 bg-base-100 p-2 shadow" tabIndex={0}>
             {navLinks.map((link) => (
               <li key={link.key}>
-                <Link href={`/${locale}${link.href}`} className={pathname === `/${locale}${link.href}` ? 'underline' : ''}>
+                <Link className={pathname === `/${locale}${link.href}` ? 'underline' : ''} href={`/${locale}${link.href}`}>
                   {t(`nav-${link.key}`)}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <Link href={`/${locale}`} className="btn btn-ghost h-auto p-2">
-          <Image src="/images/logo.svg" alt="Logo" width={40} height={40} />
+        <Link className="btn btn-ghost h-auto p-2" href={`/${locale}`}>
+          <Image alt="Logo" height={40} src="/images/logo.svg" width={40} />
         </Link>
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2">
+        <ul className="menu menu-horizontal gap-2 px-1">
           {navLinks.map((link) => (
             <li key={link.key}>
               <Link
-                href={`/${locale}${link.href}`}
                 className={`text-lg ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`}
+                href={`/${locale}${link.href}`}
               >
                 {t(`nav-${link.key}`)}
               </Link>
@@ -56,12 +56,12 @@ export default function Header({ locale }: { locale: string }) {
       </div>
 
       <div className="navbar-end gap-4">
-        <div className="hidden lg:flex gap-2">
+        <div className="hidden gap-2 lg:flex">
           {['en', 'pl', 'uk'].map((lang) => (
             <Link
               key={lang}
-              href={`/${lang}${pathname?.split('/').slice(2).join('/') || '/'}`}
               className={locale === lang ? 'overline' : ''}
+              href={`/${lang}${pathname.split('/').slice(2).join('/') || '/'}`}
             >
               {lang.toUpperCase()}
             </Link>
