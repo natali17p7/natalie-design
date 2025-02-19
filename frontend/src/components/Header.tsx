@@ -25,10 +25,10 @@ export default function Header({ locale }: { locale: string }) {
               <path d="M4 6h16M4 12h8m-8 6h16" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
             </svg>
           </label>
-          <ul className="menu dropdown-content rounded-box menu-sm z-10 mt-3 w-52 bg-base-100 p-2 shadow" tabIndex={0}>
+          <ul className="dropdown-content rounded-box menu-sm z-10 mt-3 w-52 bg-transparent p-2 shadow [&_.menu-dropdown-show]:bg-transparent [li]:hover:bg-transparent" tabIndex={0}>
             {navLinks.map((link) => (
-              <li key={link.key}>
-                <Link className={pathname === `/${locale}${link.href}` ? 'underline' : ''} href={`/${locale}${link.href}`}>
+              <li key={link.key} className="bg-transparent hover:bg-transparent">
+                <Link className={`hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`} href={`/${locale}${link.href}`}>
                   {t(`nav-${link.key}`)}
                 </Link>
               </li>
@@ -41,11 +41,11 @@ export default function Header({ locale }: { locale: string }) {
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-2 px-1">
+        <ul className="menu-horizontal flex gap-8 bg-transparent [&_.menu-dropdown-show]:bg-transparent [li]:hover:bg-transparent">
           {navLinks.map((link) => (
-            <li key={link.key}>
+            <li key={link.key} className="bg-transparent hover:bg-transparent">
               <Link
-                className={`text-lg ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`}
+                className={`text-lg hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`}
                 href={`/${locale}${link.href}`}
               >
                 {t(`nav-${link.key}`)}
@@ -60,7 +60,7 @@ export default function Header({ locale }: { locale: string }) {
           {['en', 'pl', 'uk'].map((lang) => (
             <Link
               key={lang}
-              className={locale === lang ? 'overline' : ''}
+              className={`hover:underline ${locale === lang ? 'underline' : ''}`}
               href={`/${lang}${pathname.split('/').slice(2).join('/') || '/'}`}
             >
               {lang.toUpperCase()}
