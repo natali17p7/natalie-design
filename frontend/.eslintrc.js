@@ -19,6 +19,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
+    warnOnUnsupportedTypeScriptVersion: false,
   },
   rules: {
     "tsdoc/syntax": "warn",

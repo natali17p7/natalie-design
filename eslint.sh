@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-cd frontend
-pnpm eslint . --fix
+cd "$(dirname "$0")/frontend"
+args=()
+for arg in "$@"; do
+    processed_arg="${arg/#frontend\//./}"
+    args+=("$processed_arg")
+done
+pnpm eslint "${args[@]}" --fix
