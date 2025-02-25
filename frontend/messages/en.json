@@ -57,5 +57,28 @@
   },
   "Footer": {
     "text": "© 2024 Natalie Pundyk Design. All rights reserved."
+  },
+  "WhatWeDoPage": {
+    "title": "Our Design Process",
+    "tile1": {
+      "title": "Concept Development",
+      "content": "We start with understanding your vision and translating it into actionable design concepts.",
+      "alt": "Concept development illustration"
+    },
+    "tile2": {
+      "title": "Space Planning",
+      "content": "Optimizing your space for both functionality and aesthetic appeal.",
+      "alt": "Space planning diagram"
+    },
+    "tile3": {
+      "title": "Material Selection",
+      "content": "Curating premium materials that balance quality, sustainability and budget.",
+      "alt": "Material samples display"
+    },
+    "tile4": {
+      "title": "Final Execution",
+      "content": "Bringing the design to life with meticulous attention to detail.",
+      "alt": "Completed interior project"
+    }
   }
 }

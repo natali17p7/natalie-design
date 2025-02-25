@@ -7,7 +7,7 @@ export default {
    ],
    plugins: [require("daisyui")], // eslint-disable-line @typescript-eslint/no-require-imports
    daisyui: {
-     themes: ["black"],
+     themes: false,
      darkTheme: "black",
      base: true,
      styled: true,

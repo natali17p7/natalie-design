@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import {clsx} from 'clsx'
 import {Inter} from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl'
+import ContactModal from "@/components/ContactModal"
 import {getMessages} from 'next-intl/server'
 import {ReactNode} from 'react'
 import Footer from "@/components/Footer"
@@ -26,6 +27,7 @@ export default async function BaseLayout({children, locale}: Props) {
           <Header locale={locale}/>
           <main className="min-h-[calc(100vh-160px)]">{children}</main>
           <Footer />
+          <ContactModal />
         </NextIntlClientProvider>
       </body>
     </html>
