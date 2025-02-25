@@ -59,7 +59,7 @@ it('sets a cookie', async ({page}) => {
   }
 
   const response = await page.goto('/en')
-  const value = await response?.headerValue('set-cookie')
+  const value = (await response!.headerValue('set-cookie')) as string
   expect(value).toContain('NEXT_LOCALE=en;')
   expect(value).toContain('Path=/;')
   expect(value).toContain('SameSite=lax')
@@ -89,14 +89,14 @@ it('sets a cookie', async ({page}) => {
 })
 it('serves a robots.txt', async ({page}) => {
   const response = await page.goto('/robots.txt')
-  const body = await response?.body()
-  expect(body?.toString()).toEqual('User-Agent: *\nAllow: *\n')
+  const body = response?.body()
+  expect((body as Buffer)?.toString('utf-8')).toEqual('User-Agent: *\nAllow: *\n')
 })
 it('serves a sitemap.xml', async ({page}) => {
   const response = await page.goto('/sitemap.xml')
-  const body = await response.body()
-  expect(body.toString()).toBe(
-    `<?xml version="1.0" encoding="UTF-8"?>
+  const body = (await response!.body())?.toString('utf-8')
+  expect(body).toMatchInlineSnapshot(`
+    ` + '<?xml version="1.0" encoding="UTF-8"?>\n' + `
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 <loc>http://localhost:3000/en</loc>
@@ -124,7 +124,13 @@ it('serves a sitemap.xml', async ({page}) => {
 })
 it('provides a manifest', async ({page}) => {
   const response = await page.goto('/manifest.webmanifest')
-  const body = await response.json()
+type Manifest = {
+  name: string
+  start_url: string
+  theme_color: string
+}
+
+  const body = await response!.json() as Manifest
   expect(body).toEqual({
     name: 'next-intl example',
     start_url: '/',

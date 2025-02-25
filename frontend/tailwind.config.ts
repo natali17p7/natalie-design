@@ -5,7 +5,7 @@ export default {
      "./src/**/*.{js,ts,jsx,tsx,mdx}",
      "./app/**/*.{js,ts,jsx,tsx,mdx}",
    ],
-   plugins: [require("daisyui")],
+   plugins: [require("daisyui")], // eslint-disable-line @typescript-eslint/no-require-imports
    daisyui: {
      themes: ["black"],
      darkTheme: "black",

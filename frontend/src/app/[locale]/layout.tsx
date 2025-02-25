@@ -1,6 +1,7 @@
 import {notFound} from 'next/navigation'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {ReactNode} from 'react'
+import type {Locale} from '@/i18n/routing'
 import BaseLayout from '@/components/BaseLayout'
 import {routing} from '@/i18n/routing'
 
@@ -33,7 +34,7 @@ export default async function LocaleLayout({
   // Ensure that the incoming `locale` is valid
   const p = await params
   const locale = p.locale
-  if (!routing.locales.includes(p.locale as any)) {
+  if (!routing.locales.includes(p.locale as Locale)) {
     notFound()
   }
 

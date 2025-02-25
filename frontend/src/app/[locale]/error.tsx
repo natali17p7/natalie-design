@@ -24,7 +24,7 @@ export default function Error({error, reset}: Props) {
           retry: (chunks) => (
             <button
               className="text-white underline underline-offset-2"
-              onClick={reset}
+              onClick={() => reset()}
               type="button"
             >
               {chunks}
