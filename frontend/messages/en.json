@@ -45,6 +45,14 @@
     "nav-whatWeDo": "What We Do",
     "nav-contacts": "Contacts"
   },
+  "ProjectsPage": {
+    "title": "Our Projects",
+    "categories": {
+      "all": "All",
+      "commercial": "Commercial",
+      "residential": "Residential"
+    }
+  },
   "mainPage": {
     "title": "Natalie Pundyk Design",
     "cta": "Send request"
