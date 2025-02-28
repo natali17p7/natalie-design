@@ -25,7 +25,7 @@ export default async function BaseLayout({children, locale}: Props) {
       <body className={clsx(inter.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale}/>
-          <main className="min-h-[calc(100vh-160px)]">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
           <ContactModal />
         </NextIntlClientProvider>
