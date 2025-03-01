@@ -8,7 +8,7 @@ export default function ClientButtonWithModal() {
   return (
     <>
       <button
-        className="btn btn-primary text-lg px-8 py-3"
+        className="btn btn-primary text-lg px-8 py-3 flex items-center justify-center"
         onClick={() => (document.getElementById('contact_modal') as HTMLDialogElement)?.showModal()}
       >
         {t('cta')}

@@ -10,7 +10,7 @@ export default {
      themes: [
        {
          light: {
-           "primary": "#000000", // Black
+           "primary": "#303030", // Very dark gray
            "primary-content": "#ffffff", // White text
            "base-100": "#ffffff", // White background
          },
