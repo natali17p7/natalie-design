@@ -62,7 +62,7 @@ export default function Header({ locale }: { locale: string }) {
                 </button>
               ) : (
                 <Link
-                  className={`text-lg hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? 'underline' : ''}`}
+                  className={`text-lg hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` || (link.href === '/' && pathname === `/${locale}`) ? 'underline' : ''}`}
                   href={`/${locale}${link.href}`}
                 >
                   {t(`nav-${link.key}`)}
