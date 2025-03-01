@@ -20,7 +20,7 @@ export default function Header({ locale }: { locale: string }) {
     <div className="navbar bg-base-100 px-4 sm:px-8">
       <div className="navbar-start">
         <div className="dropdown">
-          <label className="btn btn-ghost lg:hidden" tabIndex={0}>
+          <label className="btn btn-ghost md:hidden" tabIndex={0}>
             <svg className="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 6h16M4 12h8m-8 6h16" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
             </svg>
@@ -49,7 +49,7 @@ export default function Header({ locale }: { locale: string }) {
         </Link>
       </div>
 
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden md:flex">
         <ul className="menu-horizontal flex gap-8 bg-transparent [&_.menu-dropdown-show]:bg-transparent [li]:hover:bg-transparent">
           {navLinks.map((link) => (
             <li key={link.key} className="bg-transparent hover:bg-transparent">
@@ -74,7 +74,7 @@ export default function Header({ locale }: { locale: string }) {
       </div>
 
       <div className="navbar-end gap-4">
-        <div className="hidden gap-2 lg:flex">
+        <div className="flex gap-2">
           {['en', 'pl', 'uk'].map((lang) => (
             <Link
               key={lang}
