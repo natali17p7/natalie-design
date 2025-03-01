@@ -19,7 +19,7 @@ export default function IndexPage(props: Props) {
   return (
     <PageLayout background="/images/index-background.jpg">
       <div className="container mx-auto h-full flex flex-col items-center justify-center min-h-[600px]">
-        <h1 className="text-6 font font-bold mb-8">{t('title')}</h1>
+        <h1 className="text-7xl font-bold mb-8 text-white px-4 py-2 rounded-lg">{t('title')}</h1>
         <ClientButtonWithModal />
       </div>
     </PageLayout>
