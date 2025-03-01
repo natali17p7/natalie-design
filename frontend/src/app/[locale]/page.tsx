@@ -17,9 +17,11 @@ export default function IndexPage(props: Props) {
   const t = useTranslations('mainPage')
 
   return (
-    <PageLayout title={t('title')}>
-      <h1 className="text-6xl font-bold mb-8">{t('title')}</h1>
-      <ClientButtonWithModal />
+    <PageLayout background="/images/index-background.jpg">
+      <div className="container mx-auto h-full flex flex-col items-center justify-center min-h-[600px]">
+        <h1 className="text-6 font font-bold mb-8">{t('title')}</h1>
+        <ClientButtonWithModal />
+      </div>
     </PageLayout>
   )
 }
