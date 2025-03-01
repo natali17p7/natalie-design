@@ -11,6 +11,9 @@ export default function ContactModal() {
 
   return (
     <dialog className="modal" id="contact_modal">
+      <form method="dialog" className="modal-backdrop">
+        <button>{t('close')}</button>
+      </form>
       <div className="modal-box">
         <h3 className="mb-4 text-lg font-bold">{t('title')}</h3>
         <div className="space-y-2">
