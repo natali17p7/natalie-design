@@ -7,7 +7,15 @@ export default {
    ],
    plugins: [require("daisyui")], // eslint-disable-line @typescript-eslint/no-require-imports
    daisyui: {
-     themes: false,
+     themes: [
+       {
+         light: {
+           "primary": "#000000", // Black
+           "primary-content": "#ffffff", // White text
+           "base-100": "#ffffff", // White background
+         },
+       },
+     ],
      darkTheme: "black",
      base: true,
      styled: true,
