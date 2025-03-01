@@ -28,7 +28,7 @@ module.exports = {
     "semi": ["warn", "never", { "beforeStatementContinuationChars": "always" }],
     "semi-style": ["warn", "first"],
     "@typescript-eslint/no-unused-vars": [
-	  "error",
+	  "warn",
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_"
