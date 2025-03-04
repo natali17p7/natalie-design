@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="footer footer-center p-4 text-base-content/80">
       <div className="container mx-auto">
-        <p>{t('text')}</p>
+        <p className="whitespace-pre-line utility"><a href="https://github.com/aidaho">{t('text')}</a></p>
       </div>
     </footer>
   )
