@@ -22,14 +22,14 @@ export default function ProjectsClient({
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="mb-8 flex gap-4 flex-wrap">
+      <div className="mb-8 flex gap-4 flex-wrap justify-center">
         {types.map(type => (
           <button
             key={type}
             onClick={() => setSelectedType(type)}
             className={`px-4 py-2 rounded-lg ${
               type === selectedType
-                ? 'bg-blue-600 text-white'
+                ? 'btn-primary text-white'
                 : 'bg-gray-200 hover:bg-gray-300'
             }`}
           >
