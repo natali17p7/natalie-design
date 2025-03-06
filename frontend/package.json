@@ -1,7 +1,6 @@
 {
   "name": "example-app-router",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
