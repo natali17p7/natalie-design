@@ -49,8 +49,8 @@ export default function ProjectsClient({
               <Image
                 src={project.image}
                 alt={project.title}
-                height={100}
-                width={100}
+                height={500}
+                width={500}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>

@@ -10,6 +10,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+frontend/public/projects/pages
 develop-eggs/
 dist/
 downloads/

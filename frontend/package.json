@@ -1,8 +1,10 @@
 {
   "name": "example-app-router",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
+    "tdev": "next dev --turbo",
     "lint": "eslint src && tsc && prettier src --check",
     "test": "pnpm run test:playwright && pnpm run test:jest",
     "test:playwright": "playwright test",
@@ -19,6 +21,7 @@
     "next": "^15.1.7",
     "next-intl": "^3.26.3",
     "npm-check-updates": "^17.1.14",
+    "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17"
