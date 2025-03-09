@@ -1,8 +1,7 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import { getProjects, getProjectImages } from '../utils'
-import { compileMDX } from 'next-mdx-remote/rsc'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   params: {
@@ -11,15 +10,17 @@ type Props = {
   }
 }
 
-export async function generateStaticParams({ params: { locale } }: { params: { locale: string } }) {
+export function generateStaticParams({ params: { locale } }: { params: { locale: string } }) {
   const projects = getProjects(locale)
   return projects.map(project => ({ slug: project.slug }))
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default function ProjectPage({ params }: Props) {
   const { slug, locale } = params
   const projects = getProjects(locale)
   const project = projects.find(p => p.slug === slug)
+  const t = useTranslations("ProjectPage")
+
 
   if (!project) notFound()
 
@@ -41,28 +42,19 @@ export default async function ProjectPage({ params }: Props) {
           />
         )}
         <h1 className="text-4xl font-bold mt-8 mb-4">{project.title}</h1>
-        <p className="text-xl text-gray-300 mb-8">{project.summary}</p>
+        <p className="text-xl mb-8">{project.summary}</p>
+      </div>
+
+      {/* Metadata */}
+      <div className="mb-8">
+        <p><b className="text-sm font-semibold">{t('location')}:</b> {project.location}</p>
+        <p><b className="text-sm font-semibold">{t('area')}:</b> {project.area}</p>
+        <p><b className="text-sm font-semibold">{t('year')}:</b> {new Date(project.date).getFullYear()}</p>
       </div>
 
       {/* Content Section */}
       <div className="grid md:grid-cols-3 gap-12 mb-16">
         <div className="md:col-span-2">
-          {/* Metadata */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400">Location</h3>
-              <p className="text-white">{project.location}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400">Area</h3>
-              <p className="text-white">{project.area}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400">Year</h3>
-              <p className="text-white">{new Date(project.date).getFullYear()}</p>
-            </div>
-          </div>
-
           {/* MDX Content */}
           <article className="prose prose-invert">
             {project.content}
@@ -71,7 +63,7 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Achievements */}
         <div className="md:col-span-1">
-          <h2 className="text-2xl font-bold mb-4">Achievements</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('achievements')}</h2>
           <ul className="space-y-3">
             {project.achievements.map((achievement, i) => (
               <li key={i} className="flex items-start">

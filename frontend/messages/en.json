@@ -53,6 +53,12 @@
       "residential": "Residential"
     }
   },
+  "ProjectPage": {
+    "location": "Location",
+    "area": "Area",
+    "year": "Year",
+    "achievements": "What was done"
+  },
   "mainPage": {
     "title": "Natalie Pundyk Design",
     "cta": "Send request"

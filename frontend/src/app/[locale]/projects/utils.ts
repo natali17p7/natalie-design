@@ -14,6 +14,7 @@ type ProjectData = {
   location: string
   area: string
   achievements: string[]
+  content: string
 }
 
 const projectsRoot = path.join(process.cwd(), 'src/app/[locale]/projects/pages')
@@ -47,11 +48,11 @@ export function getProjects(locale: string): ProjectData[] {
         achievements?: string
       }
 
-      const { data } = grayMatter.read(mdxPath, {
+      const { data, content } = grayMatter.read(mdxPath, {
         parser: (input: string) => input.split(/\\r?\\n---\\r?\\n/)[1] // Type-safe frontmatter parsing
-      }) as { data: Frontmatter }
+      }) as { data: Frontmatter, content: string }
       const images = getProjectImages(slug)
-      const achievements = data.achievements ? data.achievements.split('|') : []
+      const achievements = data.achievements ? data.achievements.split('|').filter(n => n) : []
 
       return {
         slug,
@@ -62,6 +63,7 @@ export function getProjects(locale: string): ProjectData[] {
         location: data.location || '',
         area: data.area || '',
         achievements,
+        content: content || '',
         image: images.length > 0 ? images[0] : '',
         gallery: images.slice(1),
       }
