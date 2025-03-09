@@ -7,10 +7,21 @@ type ProjectData = {
   title: string
   type: string
   date: string
+  path: string
   image: string
+  gallery: string[]
 }
 
 const projectsRoot = path.join(process.cwd(), 'src/app/[locale]/projects/pages')
+
+function getProjectImages(slug: string): string[] {
+  const projectPath = path.join(projectsRoot, slug)
+  const images = readdirSync(projectPath)
+    .filter(file => /\.jpe?g$/i.test(file))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(image => `/projects/pages/${slug}/${image}`)
+  return images
+}
 
 export function getProjects(locale: string): ProjectData[] {
   const projectDirs = readdirSync(projectsRoot, { withFileTypes: true })
@@ -31,16 +42,15 @@ export function getProjects(locale: string): ProjectData[] {
       const { data } = grayMatter.read(mdxPath, {
         parser: (input: string) => input.split(/\\r?\\n---\\r?\\n/)[1] // Type-safe frontmatter parsing
       }) as { data: Frontmatter }
-      const images = readdirSync(path.join(projectsRoot, slug))
-        .filter(file => /\.jpe?g$/i.test(file))
-        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      const images = getProjectImages(slug)
 
       return {
         slug,
         title: data.title || '',
         type: data.type || '',
         date: data.date || '',
-        image: images.length > 0 ? `/projects/pages/${slug}/${images[0]}` : ''
+        image: images.length > 0 ? images[0] : '',
+        gallery: images.slice(1),
       }
     })
     .filter((p): p is ProjectData => p !== null)
