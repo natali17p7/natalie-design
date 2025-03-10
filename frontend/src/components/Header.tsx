@@ -1,4 +1,3 @@
-
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -29,7 +28,7 @@ export default function Header({ locale }: { locale: string }) {
             {navLinks.map((link) => (
               <li key={link.key} className="bg-transparent hover:bg-transparent">
                 {link.key === 'contacts' ? (
-                  <button 
+                  <button
                     onClick={() => (document.getElementById('contact_modal') as HTMLDialogElement)?.showModal()}
                     className="hover:underline"
                   >
@@ -79,7 +78,7 @@ export default function Header({ locale }: { locale: string }) {
             <Link
               key={lang}
               className={`hover:underline ${locale === lang ? 'underline' : ''}`}
-              href={`/${lang}${pathname.split('/').slice(2).join('/') || '/'}`}
+              href={`/${lang}/${pathname.split('/').slice(2).join('/')}`}
             >
               {lang.toUpperCase()}
             </Link>
