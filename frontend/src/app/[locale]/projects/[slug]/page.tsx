@@ -2,12 +2,13 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { getProjects, getProjectImages } from '../utils'
 import { useTranslations } from 'next-intl'
+import { use } from "react"
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string
     locale: string
-  }
+  }>
 }
 
 export function generateStaticParams({ params: { locale } }: { params: { locale: string } }) {
@@ -15,7 +16,8 @@ export function generateStaticParams({ params: { locale } }: { params: { locale:
   return projects.map(project => ({ slug: project.slug }))
 }
 
-export default function ProjectPage({ params }: Props) {
+export default function ProjectPage(props: Props) {
+  const params = use(props.params)
   const { slug, locale } = params
   const projects = getProjects(locale)
   const project = projects.find(p => p.slug === slug)
@@ -42,7 +44,6 @@ export default function ProjectPage({ params }: Props) {
           />
         )}
         <h1 className="text-4xl font-bold mt-8 mb-4">{project.title}</h1>
-        <p className="text-xl mb-8">{project.summary}</p>
       </div>
 
       {/* Metadata */}

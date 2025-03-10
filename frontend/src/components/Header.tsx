@@ -46,7 +46,7 @@ export default function Header({ locale }: { locale: string }) {
           </ul>
         </div>
         <Link className="btn btn-ghost h-auto p-2" href={`/${locale}`}>
-          <Image alt="Logo" height={40} src="/images/logo.svg" width={40} />
+          <Image alt="Logo" height={40} width={100} src="/images/Logo.png" />
         </Link>
       </div>
 
