@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
+import {routing} from '@/i18n/routing'
+
 
 export default function Header({ locale }: { locale: string }) {
   const t = useTranslations("Header")
@@ -74,7 +76,7 @@ export default function Header({ locale }: { locale: string }) {
 
       <div className="navbar-end gap-4">
         <div className="flex gap-2">
-          {['en', 'pl', 'uk'].map((lang) => (
+          {routing.locales.map((lang) => (
             <Link
               key={lang}
               className={`hover:underline ${locale === lang ? 'overline' : ''}`}
