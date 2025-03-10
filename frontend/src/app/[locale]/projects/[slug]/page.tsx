@@ -83,9 +83,11 @@ export default function ProjectPage(props: Props) {
             key={index}
             src={image.path}
             alt={`${project.title} gallery image ${index + 1}`}
-            width={image.width}
-            height={image.height}
-            className="w-full h-auto rounded-lg"
+            width={image.width > image.height ? 1400 : 700}
+            height={image.width > image.height ? 900 : 900}
+            className={`w-full h-auto rounded-lg ${
+              image.width > image.height ? 'col-span-2' : ''
+            }`}
           />
         ))}
       </div>
