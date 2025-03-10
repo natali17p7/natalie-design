@@ -36,7 +36,7 @@ export default function ProjectPage(props: Props) {
       <div className="mb-16">
         {heroImage && (
           <Image
-            src={heroImage}
+            src={heroImage.path}
             alt={project.title}
             width={1920}
             height={1080}
@@ -81,10 +81,10 @@ export default function ProjectPage(props: Props) {
         {galleryImages.map((image, index) => (
           <Image
             key={index}
-            src={image}
+            src={image.path}
             alt={`${project.title} gallery image ${index + 1}`}
-            width={800}
-            height={600}
+            width={image.width}
+            height={image.height}
             className="w-full h-auto rounded-lg"
           />
         ))}

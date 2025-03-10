@@ -47,7 +47,7 @@ export default function ProjectsClient({
           >
             <div className="relative aspect-square overflow-hidden">
               <Image
-                src={project.image}
+                src={project.image.path}
                 alt={project.title}
                 height={500}
                 width={500}

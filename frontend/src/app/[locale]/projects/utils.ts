@@ -1,6 +1,12 @@
-import { readdirSync, existsSync } from 'fs'
+import { readdirSync, existsSync, readFileSync } from 'fs'
 import path from 'path'
 import grayMatter from 'gray-matter'
+
+type ImageData = {
+  path: string
+  width: number
+  height: number
+}
 
 type ProjectData = {
   slug: string
@@ -8,8 +14,8 @@ type ProjectData = {
   type: string
   date: string
   path: string
-  image: string
-  gallery: string[]
+  image: ImageData
+  gallery: ImageData[]
   summary: string
   location: string
   area: string
@@ -19,12 +25,23 @@ type ProjectData = {
 
 const projectsRoot = path.join(process.cwd(), 'src/app/[locale]/projects/pages')
 
-export function getProjectImages(slug: string): string[] {
+import imageSize from 'image-size'
+
+export function getProjectImages(slug: string): ImageData[] {
   const projectPath = path.join(projectsRoot, slug)
   const images = readdirSync(projectPath)
     .filter(file => /\.jpe?g$/i.test(file))
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-    .map(image => `/projects/pages/${slug}/${image}`)
+    .map(image => {
+      const imagePath = path.join(projectPath, image)
+      const buffer = readFileSync(imagePath)
+      const dimensions = imageSize(buffer)
+      return {
+        path: `/projects/pages/${slug}/${image}`,
+        width: dimensions.width || 0,
+        height: dimensions.height || 0
+      }
+    })
   return images
 }
 
@@ -64,7 +81,7 @@ export function getProjects(locale: string): ProjectData[] {
         area: data.area || '',
         achievements,
         content: content || '',
-        image: images.length > 0 ? images[0] : '',
+        image: images.length > 0 ? images[0] : { path: '', width: 0, height: 0 },
         gallery: images.slice(1),
       }
     })
