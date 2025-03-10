@@ -77,7 +77,7 @@ export default function Header({ locale }: { locale: string }) {
           {['en', 'pl', 'uk'].map((lang) => (
             <Link
               key={lang}
-              className={`hover:underline ${locale === lang ? 'underline' : ''}`}
+              className={`hover:underline ${locale === lang ? 'overline' : ''}`}
               href={`/${lang}/${pathname.split('/').slice(2).join('/')}`}
             >
               {lang.toUpperCase()}
