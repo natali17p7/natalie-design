@@ -2,11 +2,11 @@ import {MetadataRoute} from 'next'
 import {getTranslations} from 'next-intl/server'
 
 type Props = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export default async function manifest({ params }: Props): Promise<MetadataRoute.Manifest> {
-  const { locale } = await params
+  const { locale } = params
   const t = await getTranslations({locale, namespace: 'Manifest'})
 
   return {
