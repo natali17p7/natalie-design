@@ -79,7 +79,7 @@ export default function Header({ locale }: { locale: string }) {
           {routing.locales.map((lang) => (
             <Link
               key={lang}
-              className={`hover:underline ${locale === lang ? 'overline' : ''}`}
+              className={`hover:overline ${locale === lang ? 'overline' : ''}`}
               href={`/${lang}/${pathname.split('/').slice(2).join('/')}`}
             >
               {lang.toUpperCase()}
