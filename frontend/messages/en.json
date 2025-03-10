@@ -4,14 +4,11 @@
     "title": "Something went wrong!"
   },
   "LocaleLayout": {
-    "title": "next-intl example"
+    "title": "Natalie Pundyk Design"
   },
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
-  },
-  "Manifest": {
-    "name": "next-intl example"
   },
   "Navigation": {
     "home": "Home",
