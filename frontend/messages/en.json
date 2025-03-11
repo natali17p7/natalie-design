@@ -40,7 +40,8 @@
     "nav-home": "Home",
     "nav-projects": "Projects",
     "nav-whatWeDo": "What We Do",
-    "nav-contacts": "Contacts"
+    "nav-about": "About",
+    "nav-contacts": "Contact"
   },
   "ProjectsPage": {
     "title": "Our Projects",
@@ -68,6 +69,10 @@
   },
   "Footer": {
     "text": "© 2025 Serhii Frolov"
+  },
+  "AboutPage": {
+    "title": "About",
+    "description": "Natalia Pundyk is a Polish interior designer renowned for her innovative approach to creating harmonious spaces. With expertise in interior, commercial, retail, and architectural design, she has established a diverse portfolio that reflects her commitment to functionality and aesthetics. Her work experience includes roles as a freelance interior designer for private and public spaces, chief architectural designer at Art Village DVLP in Texas, USA, and workspace designer at SoftServe.\n\nThrough her dedication and creativity, Natalia has made a significant impact on the interior design industry, earning recognition and appreciation from clients and peers alike."
   },
   "WhatWeDoPage": {
     "title": "Our Design Process",

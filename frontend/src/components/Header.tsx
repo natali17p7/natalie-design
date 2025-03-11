@@ -14,6 +14,7 @@ export default function Header({ locale }: { locale: string }) {
     { href: '/', key: 'home' },
     { href: '/projects', key: 'projects' },
     { href: '/what-we-do', key: 'whatWeDo' },
+    { href: '/about', key: 'about' },
     { href: '#', key: 'contacts' },
   ]
 
