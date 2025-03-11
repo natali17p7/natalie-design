@@ -6,7 +6,7 @@ type Props = {
   params: Promise<{locale: string}>;
 };
 
-export default function ProjectsPage(props) {
+export default function ProjectsPage(props: Props) {
   const params = use(props.params)
   const projects = getProjects(params.locale)
   const types = getProjectTypes(projects)
