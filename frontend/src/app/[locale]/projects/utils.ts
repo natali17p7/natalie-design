@@ -8,7 +8,7 @@ type ImageData = {
   height: number
 }
 
-type ProjectData = {
+export type ProjectData = {
   slug: string
   title: string
   type: string
