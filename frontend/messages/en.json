@@ -6,6 +6,9 @@
   "LocaleLayout": {
     "title": "Natalie Pundyk Design"
   },
+  "Manifest": {
+    "name": "Natalie Pundyk Design"
+  },
   "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found"

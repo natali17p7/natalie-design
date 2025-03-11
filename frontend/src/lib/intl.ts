@@ -8,11 +8,9 @@ export async function getIntl(locale: Locale) {
     locale,
     messages: (
       await import(
-        `../../messages/${locale}.json` satisfies {
-          default: Record<string, string>
-        }
+        `../../messages/${locale}.json`
       )
-    ).default,
+    ).default as Record<string, string>,
   })
 }
 

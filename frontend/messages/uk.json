@@ -6,6 +6,9 @@
   "LocaleLayout": {
     "title": "Natalie Pundyk Design"
   },
+  "Manifest": {
+    "name": "Natalie Pundyk Design"
+  },
   "NotFoundPage": {
     "description": "Будь ласка, перевірте адресу в браузері або скористайтесь навігацією для переходу на існуючу сторінку.",
     "title": "Сторінку не знайдено"
