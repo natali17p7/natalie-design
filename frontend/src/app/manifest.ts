@@ -9,7 +9,7 @@ export default async function manifest({
   params,
 }: Props): Promise<MetadataRoute.Manifest> {
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "Manifest" })
+  const t = await getTranslations("Manifest")
 
   return {
     name: t("name"),
