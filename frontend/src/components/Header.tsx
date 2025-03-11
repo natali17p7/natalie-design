@@ -10,12 +10,12 @@ export default function Header({ locale }: { locale: string }) {
   const pathname = usePathname()
 
   const navLinks = [
-    { href: "/", key: "home" },
-    { href: "/projects", key: "projects" },
-    { href: "/what-we-do", key: "whatWeDo" },
-    { href: "/about", key: "about" },
-    { href: "#", key: "contacts" },
-  ]
+    { href: "/", key: "nav-home" },
+    { href: "/projects", key: "nav-projects" },
+    { href: "/what-we-do", key: "nav-whatWeDo" },
+    { href: "/about", key: "nav-about" },
+    { href: "#", key: "nav-contacts" },
+  ] as const
 
   return (
     <div className="navbar bg-base-100 px-4 sm:px-8">
@@ -46,7 +46,7 @@ export default function Header({ locale }: { locale: string }) {
                 key={link.key}
                 className="bg-transparent hover:bg-transparent"
               >
-                {link.key === "contacts" ? (
+                {link.key === "nav-contacts" ? (
                   <button
                     onClick={() =>
                       (
@@ -57,14 +57,14 @@ export default function Header({ locale }: { locale: string }) {
                     }
                     className="hover:underline"
                   >
-                    {t(`nav-${link.key}`)}
+                    {t(link.key)}
                   </button>
                 ) : (
                   <Link
                     className={`hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? "underline" : ""}`}
                     href={`/${locale}${link.href}`}
                   >
-                    {t(`nav-${link.key}`)}
+                    {t(link.key)}
                   </Link>
                 )}
               </li>
@@ -80,7 +80,7 @@ export default function Header({ locale }: { locale: string }) {
         <ul className="menu-horizontal flex gap-8 bg-transparent [&_.menu-dropdown-show]:bg-transparent [li]:hover:bg-transparent">
           {navLinks.map(link => (
             <li key={link.key} className="bg-transparent hover:bg-transparent">
-              {link.key === "contacts" ? (
+              {link.key === "nav-contacts" ? (
                 <button
                   onClick={() =>
                     (
@@ -91,14 +91,14 @@ export default function Header({ locale }: { locale: string }) {
                   }
                   className="text-lg hover:underline"
                 >
-                  {t(`nav-${link.key}`)}
+                  {t(link.key)}
                 </button>
               ) : (
                 <Link
                   className={`text-lg hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` || (link.href === "/" && pathname === `/${locale}`) ? "underline" : ""}`}
                   href={`/${locale}${link.href}`}
                 >
-                  {t(`nav-${link.key}`)}
+                  {t(link.key)}
                 </Link>
               )}
             </li>
