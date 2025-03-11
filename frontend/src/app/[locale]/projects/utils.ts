@@ -66,7 +66,12 @@ export function getProjects(locale: string): ProjectData[] {
       }
 
       const { data, content } = grayMatter.read(mdxPath, {
-        parser: (input: string) => input.split(/\\r?\\n---\\r?\\n/)[1] // Type-safe frontmatter parsing
+        engines: {
+          '.mdx': (input: string) => ({
+            data: {},
+            content: input.split(/\r?\n---\r?\n/)[1]
+          })
+        }
       }) as { data: Frontmatter, content: string }
       const images = getProjectImages(slug)
       const achievements = data.achievements ? data.achievements.split('|').filter(n => n) : []
