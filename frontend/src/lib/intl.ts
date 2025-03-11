@@ -7,10 +7,10 @@ export async function getIntl(locale: Locale) {
   return createIntl({
     locale,
     messages: (
-      await import(
-        `../../messages/${locale}.json`
-      )
-    ).default as Record<string, string>,
+      (await import(`../../messages/${locale}.json`)) as {
+        default: Record<string, string>
+      }
+    ).default,
   })
 }
 
