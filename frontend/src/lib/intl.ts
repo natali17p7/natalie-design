@@ -6,11 +6,11 @@ import type { Locale } from "../../i18n-config"
 export async function getIntl(locale: Locale) {
   return createIntl({
     locale,
-    messages: (await import(`../lang/${locale}.json`)).default,
+    messages: (await import(`../../messages/${locale}.json` satisfies { default: Record<string, string> })).default,
   })
 }
 
-export function getDirection(locale: Locale) {
+export function getDirection(_locale: Locale) {
   // switch (locale) {
   //   // case "ar":
   //   //   return "rtl";

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 :root {
    --font-geist-sans: 'Geist', sans-serif;
    --font-geist-mono: 'Geist Mono', monospace;
