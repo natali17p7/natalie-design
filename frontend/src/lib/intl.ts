@@ -6,7 +6,13 @@ import type { Locale } from "../../i18n-config"
 export async function getIntl(locale: Locale) {
   return createIntl({
     locale,
-    messages: (await import(`../../messages/${locale}.json` satisfies { default: Record<string, string> })).default,
+    messages: (
+      await import(
+        `../../messages/${locale}.json` satisfies {
+          default: Record<string, string>
+        }
+      )
+    ).default,
   })
 }
 

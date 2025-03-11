@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import { getProjects, getProjectImages } from '../utils'
-import { useTranslations } from 'next-intl'
+import { notFound } from "next/navigation"
+import Image from "next/image"
+import { getProjects, getProjectImages } from "../utils"
+import { useTranslations } from "next-intl"
 import { use } from "react"
 
 type Props = {
@@ -11,7 +11,11 @@ type Props = {
   }>
 }
 
-export function generateStaticParams({ params: { locale } }: { params: { locale: string } }) {
+export function generateStaticParams({
+  params: { locale },
+}: {
+  params: { locale: string }
+}) {
   const projects = getProjects(locale)
   return projects.map(project => ({ slug: project.slug }))
 }
@@ -22,7 +26,6 @@ export default function ProjectPage(props: Props) {
   const projects = getProjects(locale)
   const project = projects.find(p => p.slug === slug)
   const t = useTranslations("ProjectPage")
-
 
   if (!project) notFound()
 
@@ -48,23 +51,29 @@ export default function ProjectPage(props: Props) {
 
       {/* Metadata */}
       <div className="mb-8">
-        <p><b className="text-sm font-semibold">{t('location')}:</b> {project.location}</p>
-        <p><b className="text-sm font-semibold">{t('area')}:</b> {project.area}</p>
-        <p><b className="text-sm font-semibold">{t('year')}:</b> {new Date(project.date).getFullYear()}</p>
+        <p>
+          <b className="text-sm font-semibold">{t("location")}:</b>{" "}
+          {project.location}
+        </p>
+        <p>
+          <b className="text-sm font-semibold">{t("area")}:</b> {project.area}
+        </p>
+        <p>
+          <b className="text-sm font-semibold">{t("year")}:</b>{" "}
+          {new Date(project.date).getFullYear()}
+        </p>
       </div>
 
       {/* Content Section */}
       <div className="grid md:grid-cols-3 gap-12 mb-16">
         <div className="md:col-span-2">
           {/* MDX Content */}
-          <article className="prose prose-invert">
-            {project.content}
-          </article>
+          <article className="prose prose-invert">{project.content}</article>
         </div>
 
         {/* Achievements */}
         <div className="md:col-span-1">
-          <h2 className="text-2xl font-bold mb-4">{t('achievements')}</h2>
+          <h2 className="text-2xl font-bold mb-4">{t("achievements")}</h2>
           <ul className="space-y-3">
             {project.achievements.map((achievement, i) => (
               <li key={i} className="flex items-start">
@@ -86,7 +95,7 @@ export default function ProjectPage(props: Props) {
             width={image.width > image.height ? 1400 : 700}
             height={image.width > image.height ? 900 : 900}
             className={`w-full h-auto rounded-lg ${
-              image.width > image.height ? 'col-span-2' : ''
+              image.width > image.height ? "col-span-2" : ""
             }`}
           />
         ))}

@@ -1,10 +1,12 @@
-import { readdirSync, statSync, copyFileSync, existsSync, mkdirSync } from 'fs'
-import * as path from 'path'
-
+import { readdirSync, statSync, copyFileSync, existsSync, mkdirSync } from "fs"
+import * as path from "path"
 
 function copyProjectImages() {
-  const projectsRoot = path.join(process.cwd(), 'src/app/[locale]/projects/pages')
-  const publicRoot = path.join(process.cwd(), 'public/projects/pages')
+  const projectsRoot = path.join(
+    process.cwd(),
+    "src/app/[locale]/projects/pages",
+  )
+  const publicRoot = path.join(process.cwd(), "public/projects/pages")
 
   // Get all project directories
   const projectDirs = readdirSync(projectsRoot, { withFileTypes: true })
@@ -28,8 +30,10 @@ function copyProjectImages() {
         const destPath = path.join(destDir, file)
 
         // Only copy if file doesn't exist or size differs
-        if (!existsSync(destPath) ||
-            statSync(sourcePath).size !== statSync(destPath).size) {
+        if (
+          !existsSync(destPath) ||
+          statSync(sourcePath).size !== statSync(destPath).size
+        ) {
           copyFileSync(sourcePath, destPath)
         }
       })
@@ -37,7 +41,7 @@ function copyProjectImages() {
 }
 
 export function register() {
-  if (process.env.NEXT_RUNTIME === 'nodejs') {
+  if (process.env.NEXT_RUNTIME === "nodejs") {
     copyProjectImages()
   }
 }

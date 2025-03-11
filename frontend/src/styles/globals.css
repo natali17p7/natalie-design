@@ -9,6 +9,6 @@
 }
 
 :root {
-   --font-geist-sans: 'Geist', sans-serif;
-   --font-geist-mono: 'Geist Mono', monospace;
- }
+  --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}

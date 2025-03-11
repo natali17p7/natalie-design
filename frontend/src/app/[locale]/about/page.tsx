@@ -1,8 +1,8 @@
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
+import { useTranslations } from "next-intl"
+import Image from "next/image"
 
 export default function AboutPage() {
-  const t = useTranslations('AboutPage')
+  const t = useTranslations("AboutPage")
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -20,8 +20,10 @@ export default function AboutPage() {
         </div>
 
         <div className="md:w-1/2">
-          <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
-          <p className="text-lg leading-relaxed whitespace-pre-line">{t('description')}</p>
+          <h1 className="text-4xl font-bold mb-6">{t("title")}</h1>
+          <p className="text-lg leading-relaxed whitespace-pre-line">
+            {t("description")}
+          </p>
         </div>
       </div>
     </div>

@@ -1,24 +1,25 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import type { ProjectData } from './utils'
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import type { ProjectData } from "./utils"
 
 export default function ProjectsClient({
   projects,
   types,
-  locale
+  locale,
 }: {
   projects: ProjectData[]
   types: string[]
   locale: string
 }) {
-  const [selectedType, setSelectedType] = useState('All')
+  const [selectedType, setSelectedType] = useState("All")
 
-  const filteredProjects = selectedType === 'All'
-    ? projects
-    : projects.filter(p => p.type === selectedType)
+  const filteredProjects =
+    selectedType === "All"
+      ? projects
+      : projects.filter(p => p.type === selectedType)
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -29,8 +30,8 @@ export default function ProjectsClient({
             onClick={() => setSelectedType(type)}
             className={`px-4 py-2 rounded-lg ${
               type === selectedType
-                ? 'btn-primary text-white'
-                : 'bg-gray-200 hover:bg-gray-300'
+                ? "btn-primary text-white"
+                : "bg-gray-200 hover:bg-gray-300"
             }`}
           >
             {type}
