@@ -11,7 +11,7 @@ export default function WhatWeDoPage() {
   }: {
     reverse: boolean
     imageSrc: string
-    contentKey: string
+    contentKey: "tile1" | "tile2" | "tile3" | "tile4"
   }) => (
     <div
       className={`flex ${reverse ? "flex-row-reverse" : "flex-row"} gap-8 w-full max-h-[80vh] mb-16`}

@@ -10,7 +10,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   if (!(routing.locales as readonly string[]).includes(locale)) {
     locale = routing.defaultLocale
   }
-  locale = locale as Locale
+  locale = locale
 
   return {
     locale,
