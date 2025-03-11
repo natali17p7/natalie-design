@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
-    "lint": "eslint src && tsc && prettier src --check",
+    "lint": "tsc --noEmit && eslint src --fix && prettier src --write",
     "test": "pnpm run test:playwright && pnpm run test:jest",
     "test:playwright": "playwright test",
     "test:jest": "jest",
@@ -49,6 +49,5 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
   },
-  "prettier": "eslint-config-molindo/.prettierrc.json",
   "packageManager": "pnpm@10.4.1"
 }

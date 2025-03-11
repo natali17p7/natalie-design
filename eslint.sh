@@ -6,4 +6,4 @@ for arg in "$@"; do
     processed_arg="${arg/#frontend\//./}"
     args+=("$processed_arg")
 done
-pnpm eslint "${args[@]}" --fix
+pnpm tsc --noEmit && pnpm eslint "${args[@]}" --fix && pnm prettier src --write
