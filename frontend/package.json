@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "tdev": "next dev --turbo",
-    "lint": "tsc --noEmit && eslint src --fix && prettier src --write",
+    "lint": "tsc --noEmit; eslint src --fix; prettier src --write",
     "test": "pnpm run test:playwright && pnpm run test:jest",
     "test:playwright": "playwright test",
     "test:jest": "jest",
