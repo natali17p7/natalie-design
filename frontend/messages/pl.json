@@ -52,26 +52,20 @@
     "description": "Natalia Pundyk to polska projektantka wnętrz znana z innowacyjnego podejścia do tworzenia harmonijnych przestrzeni. Specjalizuje się w projektowaniu wnętrz, komercyjnych, handlowych i architektonicznych, tworząc różnorodne portfolio odzwierciedlające jej zaangażowanie w funkcjonalność i estetykę. Doświadczenie zawodowe obejmuje pracę jako niezależna projektantka wnętrz dla przestrzeni prywatnych i publicznych, główna projektantka architektoniczna w Art Village DVLP w Teksasie (USA) oraz projektantka przestrzeni biurowych w SoftServe.\n\nDzięki swojemu zaangażowaniu i kreatywności, Natalia wywarła znaczący wpływ na branżę projektowania wnętrz, zdobywając uznanie klientów i kolegów z branży."
   },
   "WhatWeDoPage": {
-    "title": "Nasz proces projektowy",
     "tile1": {
-      "title": "Rozwój koncepcji",
-      "content": "Rozpoczynamy od zrozumienia Twojej wizji i przełożenia jej na konkretne koncepcje projektowe.",
-      "alt": "Ilustracja rozwoju koncepcji"
+      "title": "PROJEKT WNĘTRZ DLA PRZESTRZENI KOMERCYJNYCH I BIUROWYCH",
+      "content": "<b>Koncept</b>\nanaliza potrzeb, analiza marki, analiza przestrzeni, określenie ogólnego stylu, szkicowanie kluczowych pomysłów\n\n<b>Planowanie</b>\nopracowanie podziału na strefy, funkcjonalne rozmieszczenie, ścieżka klienta, punkty centralne, rozmieszczenie produktów\n\n<b>Szczegółowy projekt</b>\nOpracowanie wszystkich elementów wnętrza przedstawionych na wizualizacjach 3D oraz dobór materiałów\n\n<b>Projekt witryn i przestrzeni zewnętrznych</b>\nPozwól ludziom dowiedzieć się o Twojej firmie bez konieczności wchodzenia do środka.\n\n<b>Rysunki techniczne</b>\nWszystko czego potrzebujesz do realizacji projektu: rysunki wykonawcze, rysunki mebli i elementów niestandardowych\n\n<b>Elementy graficzne</b>\nProjekt materiałów POS, elementów nawigacji, znaków i elementów reklamowych.\n\n<b>Specyfikacja wyposażenia i materiałów</b>\nInformacje o produktach i materiałach wykończeniowych do zakupu",
+      "alt": "Ilustracja przestrzeni biurowej"
     },
     "tile2": {
-      "title": "Planowanie przestrzeni",
-      "content": "Optymalizujemy przestrzeń pod kątem funkcjonalności i atrakcyjności wizualnej.",
-      "alt": "Diagram planowania przestrzeni"
+      "title": "PROJEKT WNĘTRZ DLA PRZESTRZENI PRYWATNYCH",
+      "content": "<b>Koncept</b>\nanaliza potrzeb i preferencji, analiza przestrzeni, określenie ogólnego stylu, szkicowanie kluczowych pomysłów\n\n<b>Planowanie</b>\nopracowanie podziału na strefy i funkcjonalne rozmieszczenie\n\n<b>Szczegółowy projekt</b>\nOpracowanie wszystkich elementów wnętrza przedstawionych na wizualizacjach 3D oraz dobór materiałów\n\n<b>Rysunki techniczne</b>\nWszystko czego potrzebujesz do realizacji projektu: rysunki wykonawcze, rysunki mebli i elementów niestandardowych\n\n<b>Specyfikacja wyposażenia i materiałów</b>\nInformacje o produktach i materiałach wykończeniowych do zakupu",
+      "alt": "Ilustracja przestrzeni prywatnej"
     },
     "tile3": {
-      "title": "Dobór materiałów",
-      "content": "Dobieramy wysokiej jakości materiały uwzględniające jakość, zrównoważony rozwój i budżet.",
-      "alt": "Przykłady materiałów"
-    },
-    "tile4": {
-      "title": "Realizacja",
-      "content": "Wdrażamy projekt z dbałością o najmniejsze szczegóły.",
-      "alt": "Zrealizowany projekt wnętrza"
+      "title": "",
+      "content": "<title>NADZÓR</title>Chętnie poprowadzimy Cię przez proces realizacji projektu i pomożemy uniknąć nieprzewidzianych sytuacji oraz problemów.\n\n<title>CZĘŚCIOWY PROJEKT</title>Jeśli nie potrzebujesz pełnego zakresu usług lub jesteś już na określonym etapie prac, skontaktuj się z nami aby omówić optymalny dla Ciebie projekt.\n\n<title>KONSULTACJE</title>Jeśli masz wątpliwości dotyczące projektu, zawsze możesz skontaktować się z nami po poradę. Możemy Ci pomóc jeśli:\nnie jesteś pewien czy dana przestrzeń jest odpowiednim wyborem\nchcesz rozważyć pomysły na wykorzystanie przestrzeni\npotrzebujesz zewnętrznego spojrzenia na możliwości ulepszenia przestrzeni",
+      "alt": "Ilustracja nadzoru"
     }
   }
 }
