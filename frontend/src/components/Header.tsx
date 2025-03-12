@@ -38,13 +38,13 @@ export default function Header({ locale }: { locale: string }) {
             </svg>
           </label>
           <ul
-            className="dropdown-content rounded-box menu-sm z-10 mt-3 w-52 bg-transparent p-2 shadow [&_.menu-dropdown-show]:bg-transparent [li]:hover:bg-transparent"
+            className="dropdown-content rounded-box menu-md z-10 mt-3 w-64 bg-base-100 p-4 shadow"
             tabIndex={0}
           >
             {navLinks.map(link => (
               <li
                 key={link.key}
-                className="bg-transparent hover:bg-transparent"
+                className="px-4 py-2"
               >
                 {link.key === "nav-contacts" ? (
                   <button
@@ -55,13 +55,13 @@ export default function Header({ locale }: { locale: string }) {
                         ) as HTMLDialogElement
                       )?.showModal()
                     }
-                    className="hover:underline"
+                    className="text-xl hover:underline px-4 py-2"
                   >
                     {t(link.key)}
                   </button>
                 ) : (
                   <Link
-                    className={`hover:underline [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? "underline" : ""}`}
+                    className={`text-xl hover:underline px-4 py-2 [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? "underline" : ""}`}
                     href={`/${locale}${link.href}`}
                   >
                     {t(link.key)}
