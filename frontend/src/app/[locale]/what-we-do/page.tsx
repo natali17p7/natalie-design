@@ -42,8 +42,6 @@ export default function WhatWeDoPage() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-16 text-center">{t("title")}</h1>
-
       <TileRow
         reverse={false}
         imageSrc="/what-we-do/commercial.jpg"
