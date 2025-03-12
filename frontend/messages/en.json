@@ -54,24 +54,19 @@
   "WhatWeDoPage": {
     "title": "Our Design Process",
     "tile1": {
-      "title": "Concept Development",
-      "content": "We start with understanding your vision and translating it into actionable design concepts.",
-      "alt": "Concept development illustration"
+      "title": "DESIGN PROJECT FOR COMMERCIAL & OFFICE SPACES",
+      "content": "<b>Concept</b>\nstudying the needs, brand analysis, premises analysis, defining a general style, sketching key ideas \n\n<b>Planning</b>\ndevelopment of zonal division, functional arrangement, customer journey, focal points, product placement\n\n<b>Design in detail</b>\nDevelopment of all interior elements, displayed in 3D visualizations and materials selection\n\n<b>Design of showcases and outdoor areas</b>\nLetting people find out about your business without waiting for them to come in.\n\n<b>Drawings</b>\nEverything you need to implement the design: drawings for repair, drawings for furniture and custom elements execution \n\n<b>Graphic elements</b>\nDesign of POS-materials, navigation elements, signs and advertisement elements.\n\n<b>Specification of equipment and materials</b>\nInformation of products and facing materials to be purchased\n",
+      "alt": "Office space illustration"
     },
     "tile2": {
-      "title": "Space Planning",
-      "content": "Optimizing your space for both functionality and aesthetic appeal.",
-      "alt": "Space planning diagram"
+      "title": "DESIGN PROJECT FOR PRIVATE SPACES",
+      "content": "<b>Concept</b>\nstudying the needs and preferences, premises analysis, defining a general style, sketching key ideas\n\n<b>Planning</b>\ndevelopment of zonal division, functional arrangement\n\n<b>Design in detail</b>\nDevelopment of all interior elements, displayed in 3D visualizations and materials selection\n\n<b>Drawings</b>\nEverything you need to implement the design: drawings for repair, drawings for furniture and custom elements execution\n\n<b>Specification of equipment and materials</b>\nInformation of products and facing materials to be purchased\n",
+      "alt": "Private space illustration"
     },
     "tile3": {
-      "title": "Material Selection",
-      "content": "Curating premium materials that balance quality, sustainability and budget.",
-      "alt": "Material samples display"
-    },
-    "tile4": {
-      "title": "Final Execution",
-      "content": "Bringing the design to life with meticulous attention to detail.",
-      "alt": "Completed interior project"
+      "title": "",
+      "content": "<title>SUPERVISION</title>We will gladly guide you through the implementation of your project and help you avoid unforeseen situations and issues along the way.\n\n<title>PARTIAL PROJECT</title>If you don't need the entire list of services, or you are already at a certain stage of work on the premises, please contact us to discuss an optimal project for you.\n\n<title>CONSULTING</title>If you hesitate about your project you can always contact us for advice. We can help you if:\nyou are not sure if a certain premiss is the right choice\nyou want to consider the ideas for using the space\nyou need an outside view on the possibilities of improving the space\n",
+      "alt": "Supervision illustration"
     }
   }
 }

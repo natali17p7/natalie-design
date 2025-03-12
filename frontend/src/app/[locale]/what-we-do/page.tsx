@@ -24,10 +24,13 @@ export default function WhatWeDoPage() {
           className="object-cover rounded-lg"
         />
       </div>
-      <div className="w-1/2 bg-base-200 p-8 rounded-lg flex items-center justify-center">
+      <div className="w-1/2 p-8 rounded-lg flex items-center justify-center">
         <div className="prose max-w-2xl">
           <h2 className="text-3xl mb-4">{t(`${contentKey}.title`)}</h2>
-          <p>{t(`${contentKey}.content`)}</p>
+          <div className="whitespace-pre-line">{t.rich(`${contentKey}.content`, {
+            title: chunks => <h2 className="text-3xl">{chunks}</h2>,
+            b: chunks => <b>{chunks}</b>,
+          })}</div>
         </div>
       </div>
     </div>
@@ -39,23 +42,18 @@ export default function WhatWeDoPage() {
 
       <TileRow
         reverse={false}
-        imageSrc="/images/placeholder1.jpg"
+        imageSrc="/what-we-do/commercial.jpg"
         contentKey="tile1"
       />
       <TileRow
         reverse={true}
-        imageSrc="/images/placeholder2.jpg"
+        imageSrc="/what-we-do/private.jpg"
         contentKey="tile2"
       />
       <TileRow
         reverse={false}
-        imageSrc="/images/placeholder3.jpg"
+        imageSrc="/what-we-do/supervision.jpg"
         contentKey="tile3"
-      />
-      <TileRow
-        reverse={true}
-        imageSrc="/images/placeholder4.jpg"
-        contentKey="tile4"
       />
     </div>
   )
