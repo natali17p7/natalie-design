@@ -42,10 +42,7 @@ export default function Header({ locale }: { locale: string }) {
             tabIndex={0}
           >
             {navLinks.map(link => (
-              <li
-                key={link.key}
-                className="px-4 py-2"
-              >
+              <li key={link.key} className="px-4 py-2">
                 {link.key === "nav-contacts" ? (
                   <button
                     onClick={() =>
