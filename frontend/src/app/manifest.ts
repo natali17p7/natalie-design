@@ -1,14 +1,12 @@
 import { MetadataRoute } from "next"
 import { getTranslations } from "next-intl/server"
+import { routing } from "@/i18n/routing"
 
-type Props = {
-  _params: { locale: string }
-}
-
-export default async function manifest({
-  _params,
-}: Props): Promise<MetadataRoute.Manifest> {
-  const t = await getTranslations("Manifest")
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const t = await getTranslations({
+    locale: routing.defaultLocale,
+    namespace: "Manifest",
+  })
 
   return {
     name: t("name"),
