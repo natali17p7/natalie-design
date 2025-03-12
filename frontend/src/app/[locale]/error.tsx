@@ -6,7 +6,7 @@ import PageLayout from "@/components/PageLayout"
 
 type Props = {
   error: Error
-  reset(): void
+  reset(this: void): void
 }
 
 export default function Error({ error, reset }: Props) {
