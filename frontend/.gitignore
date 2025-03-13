@@ -1,6 +1,5 @@
 /node_modules
 /.next/
-/.open-next/
 .DS_Store
 tsconfig.tsbuildinfo
 /test-results/
