@@ -10,7 +10,11 @@
     "test:playwright": "playwright test",
     "test:jest": "jest",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build:worker": "opennextjs-cloudflare",
+    "dev:worker": "pnpm wrangler dev --port 8771",
+    "preview:worker": "pnpm run build:worker && pnpm run dev:worker",
+    "deploy:worker": "pnpm run build:worker && pnpm wrangler deploy"
   },
   "dependencies": {
     "@formatjs/intl": "^3.1.4",
@@ -49,7 +53,8 @@
     "postcss": "^8.5.2",
     "prettier": "^3.5.1",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1"
+    "typescript-eslint": "^8.24.1",
+    "wrangler": "^3.114.1"
   },
   "packageManager": "pnpm@10.4.1"
 }
