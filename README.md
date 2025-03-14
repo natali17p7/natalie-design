@@ -1,5 +1,9 @@
 # natalie-homepage
 
+How to test for build errors:
+
+$> pnpm tsc
+
 Build containers. Add -up flag to bring services up after build.
 
 ```sh
@@ -42,6 +46,7 @@ $> docker stop $(docker ps -a -q)
 ```
 
 npm i -g corepack@latest
+
 pnpm add -g npm-check-updates
 ncu
 ncu -u

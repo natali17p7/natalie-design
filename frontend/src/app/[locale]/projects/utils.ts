@@ -23,7 +23,7 @@ export type ProjectData = {
   content: string
 }
 
-const projectsRoot = path.join(process.cwd(), "src/app/[locale]/projects/pages")
+const projectsRoot = path.join(process.cwd(), "public/projects/pages")
 
 import imageSize from "image-size"
 
