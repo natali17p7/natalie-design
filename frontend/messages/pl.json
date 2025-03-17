@@ -4,10 +4,10 @@
     "title": "Coś poszło nie tak!"
   },
   "LocaleLayout": {
-    "title": "Natalie Pundyk Design"
+    "title": "Natalie Pyndyk Design"
   },
   "Manifest": {
-    "name": "Natalie Pundyk Design"
+    "name": "Natalie Pyndyk Design"
   },
   "NotFoundPage": {
     "description": "Proszę sprawdź poprawność adresu w przeglądarce lub skorzystaj z nawigacji, aby przejść do znanej strony.",
@@ -35,7 +35,7 @@
     "achievements": "Co zostało wykonane"
   },
   "mainPage": {
-    "title": "Natalie Pundyk Design",
+    "title": "Natalie Pyndyk Design",
     "cta": "Wyślij zapytanie"
   },
   "contactModal": {
@@ -49,7 +49,7 @@
   },
   "AboutPage": {
     "title": "O nas",
-    "description": "Natalia Pundyk to polska projektantka wnętrz znana z innowacyjnego podejścia do tworzenia harmonijnych przestrzeni. Specjalizuje się w projektowaniu wnętrz, komercyjnych, handlowych i architektonicznych, tworząc różnorodne portfolio odzwierciedlające jej zaangażowanie w funkcjonalność i estetykę. Doświadczenie zawodowe obejmuje pracę jako niezależna projektantka wnętrz dla przestrzeni prywatnych i publicznych, główna projektantka architektoniczna w Art Village DVLP w Teksasie (USA) oraz projektantka przestrzeni biurowych w SoftServe.\n\nDzięki swojemu zaangażowaniu i kreatywności, Natalia wywarła znaczący wpływ na branżę projektowania wnętrz, zdobywając uznanie klientów i kolegów z branży."
+    "description": "Natalia Pyndyk to polska projektantka wnętrz znana z innowacyjnego podejścia do tworzenia harmonijnych przestrzeni. Specjalizuje się w projektowaniu wnętrz, komercyjnych, handlowych i architektonicznych, tworząc różnorodne portfolio odzwierciedlające jej zaangażowanie w funkcjonalność i estetykę. Doświadczenie zawodowe obejmuje pracę jako niezależna projektantka wnętrz dla przestrzeni prywatnych i publicznych, główna projektantka architektoniczna w Art Village DVLP w Teksasie (USA) oraz projektantka przestrzeni biurowych w SoftServe.\n\nDzięki swojemu zaangażowaniu i kreatywności, Natalia wywarła znaczący wpływ na branżę projektowania wnętrz, zdobywając uznanie klientów i kolegów z branży."
   },
   "WhatWeDoPage": {
     "tile1": {
