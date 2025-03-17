@@ -18,7 +18,7 @@ export default function IndexPage(props: Props) {
 
   return (
     <PageLayout background="/images/index-background.jpg">
-      <div className="container mx-auto h-full flex flex-col items-center justify-center min-h-[600px]">
+      <div className="container mx-auto h-full flex flex-col items-center justify-center min-h-[600px] text-center">
         <h1 className="text-7xl font-bold mb-8 text-white px-4 py-2 rounded-lg">
           {t("title")}
         </h1>
