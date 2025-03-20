@@ -60,7 +60,9 @@ export default function Header({ locale }: { locale: string }) {
                   <Link
                     className={`text-xl hover:underline px-4 py-2 [&.active]:bg-transparent ${pathname === `/${locale}${link.href}` ? "underline" : ""}`}
                     href={`/${locale}${link.href}`}
-                    onClick={() => (document.activeElement as HTMLElement)?.blur()}
+                    onClick={() =>
+                      (document.activeElement as HTMLElement)?.blur()
+                    }
                   >
                     {t(link.key)}
                   </Link>

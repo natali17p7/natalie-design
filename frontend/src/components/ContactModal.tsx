@@ -18,7 +18,9 @@ export default function ContactModal() {
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-bold">{t("title")}</h3>
           <form method="dialog">
-            <button className="btn btn-ghost p-2 text-xl transition-colors duration-200 hover:bg-gray-100 hover:rounded-lg">✕</button>
+            <button className="btn btn-ghost p-2 text-xl transition-colors duration-200 hover:bg-gray-100 hover:rounded-lg">
+              ✕
+            </button>
           </form>
         </div>
         <div className="space-y-2">
