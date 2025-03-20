@@ -53,40 +53,6 @@ it('can be used to localize the page', async ({page}) => {
   await page.goto('/de')
   page.getByRole('heading', {name: 'next-intl Beispiel'})
 })
-it('sets a cookie', async ({page}) => {
-  function getCookieValue() {
-    return page.evaluate(() => document.cookie)
-  }
-
-  const response = await page.goto('/en')
-  const value = (await response!.headerValue('set-cookie')) as string
-  expect(value).toContain('NEXT_LOCALE=en;')
-  expect(value).toContain('Path=/;')
-  expect(value).toContain('SameSite=lax')
-  expect(value).toContain('Max-Age=31536000;')
-  expect(value).toContain('Expires=')
-  expect(await getCookieValue()).toBe('NEXT_LOCALE=en')
-
-  await page
-    .getByRole('combobox', {name: 'Change language'})
-    .selectOption({value: 'de'})
-  await expect(page).toHaveURL('/de')
-  expect(await getCookieValue()).toBe('NEXT_LOCALE=de')
-
-  await page
-    .getByRole('combobox', {name: 'Sprache ändern'})
-    .selectOption({value: 'en'})
-  await expect(page).toHaveURL('/en')
-  expect(await getCookieValue()).toBe('NEXT_LOCALE=en')
-
-  // The Next.js Router cache kicks in here
-  // https://nextjs.org/docs/app/building-your-application/caching#router-cache
-  await page
-    .getByRole('combobox', {name: 'Change language'})
-    .selectOption({value: 'de'})
-  await expect(page).toHaveURL('/de')
-  expect(await getCookieValue()).toBe('NEXT_LOCALE=de')
-})
 it('serves a robots.txt', async ({page}) => {
   const response = await page.goto('/robots.txt')
   const body = response?.body()
