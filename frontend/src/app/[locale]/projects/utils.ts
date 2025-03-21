@@ -16,7 +16,6 @@ export type ProjectData = {
   path: string
   image: ImageData
   gallery: ImageData[]
-  summary: string
   location: string
   area: string
   achievements: string[]
@@ -59,7 +58,6 @@ export function getProjects(locale: string): ProjectData[] {
         title?: string
         type?: string
         date?: string
-        summary?: string
         location?: string
         area?: string
         achievements?: string
@@ -83,7 +81,6 @@ export function getProjects(locale: string): ProjectData[] {
         title: data.title || "",
         type: data.type || "",
         date: data.date || "",
-        summary: data.summary || "",
         location: data.location || "",
         area: data.area || "",
         achievements,
