@@ -95,5 +95,24 @@ export function getProjects(locale: string): ProjectData[] {
 }
 
 export function getProjectTypes(projects: ProjectData[]): string[] {
-  return ["All", ...new Set(projects.map(p => p.type))].sort()
+  const priorityOrder = [
+    "commercial", "комерційний", "komercyjny",
+    "residential", "житловий", "mieszkaniowy",
+    "architectural Design", "архітектурний дизайн", "projekt architektoniczny"
+  ]
+  const priorityOrderLower = priorityOrder.map(item => item.toLowerCase())
+  const typeSet = new Set(projects.map(p => p.type))
+  return [
+    "All",
+    ...Array.from(typeSet).sort((a, b) => {
+      const aLower = a.toLowerCase()
+      const bLower = b.toLowerCase()
+      const aIndex = priorityOrderLower.indexOf(aLower)
+      const bIndex = priorityOrderLower.indexOf(bLower)
+      if (aIndex === -1 && bIndex === -1) return a.localeCompare(b) // Both not in priority - sort alphabetically
+      if (aIndex === -1) return 1 // Only a not in priority - b comes first
+      if (bIndex === -1) return -1 // Only b not in priority - a comes first
+      return aIndex - bIndex // Both in priority - maintain list order
+    }),
+  ]
 }
