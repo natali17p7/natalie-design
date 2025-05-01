@@ -10,7 +10,7 @@ type Props = {
 export default function PageLayout({ children, title, background }: Props) {
   return (
     <div
-      className="relative flex grow flex-col py-36"
+      className="relative flex min-h-screen flex-col"
       style={{
         background:
           "linear-gradient(to bottom right, rgb(245, 245, 245), rgb(200, 200, 200))",
@@ -21,16 +21,16 @@ export default function PageLayout({ children, title, background }: Props) {
           alt=""
           src={background}
           fill
-          priority
           className="object-cover"
           style={{
             position: "absolute",
+            height: "100%",
             zIndex: 0,
           }}
         />
       )}
       <div
-        className="container relative flex grow flex-col items-center mx-auto px-4"
+        className="container relative flex grow flex-col items-center mx-auto px-4 py-36"
         style={{ zIndex: 1 }}
       >
         {title && (

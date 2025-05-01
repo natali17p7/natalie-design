@@ -96,9 +96,15 @@ export function getProjects(locale: string): ProjectData[] {
 
 export function getProjectTypes(projects: ProjectData[]): string[] {
   const priorityOrder = [
-    "commercial", "комерційний", "komercyjny",
-    "residential", "житловий", "mieszkaniowy",
-    "architectural Design", "архітектурний дизайн", "projekt architektoniczny"
+    "commercial",
+    "комерційний",
+    "komercyjny",
+    "residential",
+    "житловий",
+    "mieszkaniowy",
+    "architectural Design",
+    "архітектурний дизайн",
+    "projekt architektoniczny",
   ]
   const priorityOrderLower = priorityOrder.map(item => item.toLowerCase())
   const typeSet = new Set(projects.map(p => p.type))
