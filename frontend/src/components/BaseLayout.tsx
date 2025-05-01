@@ -7,6 +7,7 @@ import { getMessages } from "next-intl/server"
 import { ReactNode } from "react"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,6 +30,7 @@ export default async function BaseLayout({ children, locale }: Props) {
           <Footer />
           <ContactModal />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
