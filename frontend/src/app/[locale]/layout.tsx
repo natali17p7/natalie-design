@@ -17,10 +17,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Omit<Props, "children">) {
   const p = await params
   const locale = p.locale
-  const t = await getTranslations({ locale, namespace: "LocaleLayout" })
+  const t = await getTranslations({ locale, namespace: "Metadata" })
 
   return {
     title: t("title"), // default website title
+    description: t("description"), //
   }
 }
 

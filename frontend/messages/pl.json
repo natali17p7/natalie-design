@@ -3,11 +3,9 @@
     "description": "<p>Niestety wystąpił błąd.</p><p>Możesz spróbować <retry>przeładować stronę</retry>, którą odwiedzałeś.</p>",
     "title": "Coś poszło nie tak!"
   },
-  "LocaleLayout": {
-    "title": "Natalie Pyndyk Design"
-  },
-  "Manifest": {
-    "name": "Natalie Pyndyk Design"
+  "Metadata": {
+    "title": "Natalie Pyndyk Design",
+    "description": "Natalia Pyndyk: Projektantka wnętrz komercyjnych, mieszkalnych i przestrzeni publicznych. Specjalizacja: wnętrza sklepowe, biurowe, Airbnb, domowe oraz koncepcje biznesowe."
   },
   "NotFoundPage": {
     "description": "Proszę sprawdź poprawność adresu w przeglądarce lub skorzystaj z nawigacji, aby przejść do znanej strony.",
@@ -49,7 +47,7 @@
   },
   "AboutPage": {
     "title": "O nas",
-    "description": "Natalia Pyndyk to polska projektantka wnętrz znana z innowacyjnego podejścia do tworzenia harmonijnych przestrzeni. Specjalizuje się w projektowaniu wnętrz, komercyjnych, handlowych i architektonicznych, tworząc różnorodne portfolio odzwierciedlające jej zaangażowanie w funkcjonalność i estetykę. Doświadczenie zawodowe obejmuje pracę jako niezależna projektantka wnętrz dla przestrzeni prywatnych i publicznych, główna projektantka architektoniczna w Art Village DVLP w Teksasie (USA) oraz projektantka przestrzeni biurowych w SoftServe.\n\nDzięki swojemu zaangażowaniu i kreatywności, Natalia wywarła znaczący wpływ na branżę projektowania wnętrz, zdobywając uznanie klientów i kolegów z branży."
+    "description": "Natalia Pyndyk to polska projektantka wnętrz znana z innowacyjnego podejścia do tworzenia harmonijnych przestrzeni. Specjalizuje się w projektowaniu wnętrz komercyjnych, mieszkalnych i przestrzeni publicznych. Doświadczenie zawodowe obejmuje pracę jako niezależna projektantka wnętrz, główna projektantka architektoniczna w Art Village DVLP w Teksasie (USA) oraz projektantka przestrzeni biurowych w SoftServe.\n\nDzięki swojemu zaangażowaniu i kreatywności, Natalia zdobyła uznanie klientów i kolegów z branży projektowania wnętrz."
   },
   "WhatWeDoPage": {
     "tile1": {
@@ -64,7 +62,7 @@
     },
     "tile3": {
       "title": "",
-      "content": "<title>NADZÓR</title>Chętnie poprowadzimy Cię przez proces realizacji projektu i pomożemy uniknąć nieprzewidzianych sytuacji oraz problemów.\n\n<title>CZĘŚCIOWY PROJEKT</title>Jeśli nie potrzebujesz pełnego zakresu usług lub jesteś już na określonym etapie prac, skontaktuj się z nami aby omówić optymalny dla Ciebie projekt.\n\n<title>KONSULTACJE</title>Jeśli masz wątpliwości dotyczące projektu, zawsze możesz skontaktować się z nami po poradę. Możemy Ci pomóc jeśli:\nnie jesteś pewien czy dana przestrzeń jest odpowiednim wyborem\nchcesz rozważyć pomysły na wykorzystanie przestrzeni\npotrzebujesz zewnętrznego spojrzenia na możliwości ulepszenia przestrzeni",
+      "content": "<title>NADZÓR</title>Chętnie poprowadzimy Cię przez proces realizacji projektu i pomożemy uniknąć nieprzewidzianych sytuacji.\n\n<title>CZĘŚCIOWY PROJEKT</title>Jeśli nie potrzebujesz pełnego zakresu usług lub jesteś już na określonym etapie prac, skontaktuj się z nami aby omówić optymalny projekt.\n\n<title>KONSULTACJE</title>Jeśli masz wątpliwości dotyczące projektu, zawsze możesz skontaktować się z nami po poradę. Możemy Ci pomóc jeśli:\nnie jesteś pewien czy dana przestrzeń jest odpowiednim wyborem\nchcesz rozważyć pomysły na wykorzystanie przestrzeni\npotrzebujesz zewnętrznego spojrzenia na możliwości ulepszenia przestrzeni",
       "alt": "Ilustracja nadzoru"
     }
   }
