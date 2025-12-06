@@ -12,3 +12,8 @@
   --font-geist-sans: "Geist", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }
+
+/* Remove rounded corners from DaisyUI buttons */
+.btn {
+  border-radius: 0 !important;
+}
