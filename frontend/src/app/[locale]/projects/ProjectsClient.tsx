@@ -28,7 +28,7 @@ export default function ProjectsClient({
           <button
             key={type}
             onClick={() => setSelectedType(type)}
-            className={`px-4 py-2 rounded-lg ${
+            className={`px-4 py-2 lg ${
               type === selectedType
                 ? "btn-primary text-white"
                 : "bg-gray-200 hover:bg-gray-300"
@@ -44,7 +44,7 @@ export default function ProjectsClient({
           <Link
             key={project.slug}
             href={`/${locale}/projects/${project.slug}`}
-            className="group block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            className="group block overflow-hidden lg transition-shadow"
           >
             <div className="relative aspect-square overflow-hidden">
               <Image
@@ -55,7 +55,7 @@ export default function ProjectsClient({
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="p-4">
+            <div className="pt-2 pb-4 pl-0">
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
               <p className="text-gray-600 text-sm">{project.type}</p>
             </div>

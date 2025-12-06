@@ -21,10 +21,10 @@ export default function WhatWeDoPage() {
           src={imageSrc}
           alt={t(`${contentKey}.alt`)}
           fill
-          className="object-contain md:object-cover rounded-lg"
+          className="object-contain md:object-cover lg"
         />
       </div>
-      <div className="md:w-1/2 w-full px-4 md:px-8 py-4 md:py-8 rounded-lg flex items-center justify-center overflow-y-auto">
+      <div className="md:w-1/2 w-full px-4 md:px-8 py-4 md:py-8 lg flex items-center justify-center overflow-y-auto">
         <div className="prose max-w-2xl md:text-base text-sm">
           <h2 className="md:text-3xl text-2xl mb-4">
             {t(`${contentKey}.title`)}

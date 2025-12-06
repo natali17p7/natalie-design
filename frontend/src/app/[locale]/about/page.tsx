@@ -9,11 +9,11 @@ export default function AboutPage() {
       <div className="flex flex-col md:flex-row gap-8">
         {/* Placeholder image - replace with actual image path */}
         <div className="md:w-1/2">
-          <div className="relative h-[950px] rounded-lg">
+          <div className="relative h-[950px] lg">
             <Image
               alt="About"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover lg"
               src="/images/About.jpg" // Temporary placeholder
             />
           </div>

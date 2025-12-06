@@ -18,7 +18,7 @@ export default function ContactModal() {
         <div className="relative flex items-center justify-center mb-4">
           <h3 className="text-lg font-bold text-center">{t("title")}</h3>
           <form method="dialog" className="absolute right-4">
-            <button className="btn btn-ghost p-2 text-xl transition-colors duration-200 hover:bg-gray-100 hover:rounded-lg">
+            <button className="btn btn-ghost p-2 text-xl transition-colors duration-200 hover:bg-gray-100 hover:lg">
               ✕
             </button>
           </form>

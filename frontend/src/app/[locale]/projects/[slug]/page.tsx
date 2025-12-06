@@ -43,7 +43,7 @@ export default function ProjectPage(props: Props) {
             alt={project.title}
             width={1920}
             height={1080}
-            className="w-full h-96 object-cover rounded-lg"
+            className="w-full h-96 object-cover lg"
           />
         )}
         <h1 className="text-4xl font-bold mt-8 mb-4">{project.title}</h1>
@@ -94,7 +94,7 @@ export default function ProjectPage(props: Props) {
             alt={`${project.title} gallery image ${index + 1}`}
             width={image.width > image.height ? 1400 : 700}
             height={image.width > image.height ? 900 : 900}
-            className={`w-full h-auto rounded-lg ${
+            className={`w-full h-auto lg ${
               image.width > image.height ? "col-span-2" : ""
             }`}
           />
