@@ -1,52 +1,48 @@
-# natalie-homepage
+# natalie-design
 
-How to test for build errors:
+**Next.js server-side rendered serverless site **
 
-$> pnpm tsc
 
-Build containers. Add -up flag to bring services up after build.
 
+How to run devserver:
 ```sh
-$> docker compose build
+pnpm dev
 ```
 
 
-Bring containers up. Add -d flag to run output detached from current shell.
-
+How to run prod build:
 ```sh
-$> docker compose up
+pnpm build
+pnpm start
 ```
 
 
-Bring containers down. Add -v flag to also delete named volumes
-
+How to lint/fix the code:
 ```sh
-$> docker compose down
+pnpm lint
 ```
 
 
-View logs by service name.
-
+How to run tests:
 ```sh
-$> docker compose logs <service-name>
+pnpm test
 ```
 
 
-Enter shell for specified container (must be running)
-
+How to check for updates
 ```sh
-$> docker exec -it <container-name> sh
-```
-
-
-Stop other containers in case port conflicts
-
-``` sh
-$> docker stop $(docker ps -a -q)
-```
-
-npm i -g corepack@latest
-
-pnpm add -g npm-check-updates
 ncu
 ncu -u
+```
+
+
+How to list available package versions
+```sh
+pnpm show pkgname versions
+```
+
+
+How to check for security vulnerabilities and patched versions
+``` sh
+pnpm audit | grep -E "high|critical" -B3 -A10
+```
