@@ -43,6 +43,12 @@ pnpm show pkgname versions
 
 
 How to check for security vulnerabilities and patched versions
-``` sh
+```sh
 pnpm audit | grep -E "high|critical" -B3 -A10
+```
+
+
+How to prepare images before committing into a tree
+```sh
+mogrify -filter Lanczos -adaptive-blur 1 -quality 80 -adaptive-resize 3000x3000
 ```
